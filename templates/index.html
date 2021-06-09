@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Proxima</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#000">
+
+  <!-- <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" sizes="180x180"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-32x32.png" sizes="32x32" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-16x16.png" sizes="16x16" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon"> -->
+
+  <!-- <link rel="stylesheet" href="css/main-first.min.css">	 -->
+  <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
+</head>
+<body>
+  {% include 'pages/blocks/metrika.html'%}
+  <div id="site">
+    {% include 'pages/blocks/header.html'%}
+    <main class="main">
+      <section class="hero">
+        <!-- Если видео не нужно удалите этот блок -->
+        <div class="video_bg video_bg-dark">
+          <video class="video_bg__video" autoplay muted loop>
+            <!-- <source src="vid.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> -->
+            <source src="{% static 'vid.webm' %}" type='video/webm; codecs="vp8, vorbis"'>
+          </video>
+        </div>
+        <!-- Если видео не нужно удалите этот блок -->
+        <div class="container hero__container">
+          <h1 class="title_main hero__title">
+            Proxima<br>
+            Capital Group
+          </h1>
+          <p class="hero__desc">
+            Российская <br>инвестиционная компания
+          </p>
+        </div>
+      </section>
+      <section class="about_section" id="about">
+        <h2 class="title-hidden">
+          О компании
+        </h2>
+        <div class="container">
+          <div class="about_section__text">
+            <p>
+              Российская инвестиционная компания <b class="colored">Proxima Capital Group</b> основана в 2013 году.
+            </p>
+            <p>
+              Компания работает в двух основных направлениях -  инвестиции собственных средств в капитал непубличных компаний и оказание консалтинговых услуг по двум линиям: инвестиционно-банковские услуги, а также услуги по работе с проблемной задолженностью и активами.
+            </p>
+          </div>
+          <div class="about_section__link_wrapper">
+            <a class="btn btn_link" href="#">
+              о компании
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="synergy">
+        <div class="container">
+          <h2 class="title_center synergy__title">
+            Синергия
+          </h2>
+          <div class="synergy__links">
+            <a class="btn btn_beautiful_link synergy__link-mob_mb" href="consulting.html">
+              Консалтинговые услуги
+            </a>
+            <a class="btn btn_beautiful_link" href="active.html">
+              Собственные инвестиции
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="team_section" id="team">
+        <h2 class="title-hidden">
+          Наша команда
+        </h2>
+        <div class="container team_section__container">
+          <p class="team_section__desc">
+            <b class="colored">Наш самый ценный актив — это команда</b> профессионалов с богатым опытом
+            в области инвестиций, корпоративного управления
+            и риск&#8209;менеджмента
+          </p>
+          <a class="btn btn_link btn_link-tall btn_link-white" href="team.html">
+            ключевые члены команды PCG
+          </a>
+        </div>
+      </section>
+      <section class="projects_section" id="career">
+        <h2 class="title-hidden">
+          Проекты
+        </h2>
+        <div class="container container-narrow">
+          <p class="projects_section__desc">
+            <b class="colored">Группа</b> реализует инвестиционные
+            и консалтинговые проекты на территории
+            России и стран СНГ
+          </p>
+          <div class="projects_section__projects">
+            <h3 class="projects_section__subtitle">
+              Консалтинговые проекты
+            </h3>
+            <ul class="rst projects_section__items">
+              <li class="projects_section__item" style="background-image: url({% static 'img/upload/consulting_projects/1.png' %})"></li>
+              <li class="projects_section__item" style="background-image: url({% static 'img/upload/consulting_projects/2.png' %})"></li>
+              <li class="projects_section__item" style="background-image: url({% static 'img/upload/consulting_projects/3.png' %})"></li>
+              <li class="projects_section__item" style="background-image: url({% static 'img/upload/consulting_projects/4.png' %})"></li>
+              <li class="projects_section__item" style="background-image: url({% static 'img/upload/consulting_projects/5.png' %})"></li>
+              <li class="projects_section__item" style="background-image: url({% static 'img/upload/consulting_projects/6.png' %})"></li>
+            </ul>
+            <div class="btn_wrap">
+              <a class="btn btn_link btn_link-tall" href="#">
+                КОНСАЛТИНГОВЫЕ проекты PCG
+              </a>
+            </div>
+          </div>
+          <div class="projects_section__projects">
+            <h3 class="projects_section__subtitle">
+              Собственные инвестиции
+            </h3>
+            <ul class="rst projects_section__items">
+              <li class="projects_section__item" style="background-image: url({% static 'img/upload/own_investment/1.png' %})"></li>
+              <li class="projects_section__item" style="background-image: url({% static 'img/upload/own_investment/2.png' %})"></li>
+              <li class="projects_section__item projects_section__item-mob_order_5" style="background-image: url({% static 'img/upload/own_investment/3.png' %})"></li>
+              <li class="projects_section__item projects_section__item-mob_order_4" style="background-image: url({% static 'img/upload/own_investment/4.png' %})"></li>
+              <li class="projects_section__item projects_section__item-mob_order_3" style="background-image: url({% static 'img/upload/own_investment/5.png' %})"></li>
+            </ul>
+            <div class="btn_wrap">
+              <a class="btn btn_link btn_link-tall" href="#">
+                Собственные инвестиции PCG
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contacts_section from-sm">
+        <h2 class="title-hidden">
+          Контакты
+        </h2>
+        <div class="container contacts_section__container">
+          <div class="contacts_section__content">
+            <a class="contacts_section__phone" href="tel:+74959700786">
+              +7 (495) 970 07 86
+            </a>
+            <a class="contacts_section__email" href="mailto:info@proximagroup.ru">
+              info@proximagroup.ru
+            </a>
+            <address class="contacts_section__address">
+              123112, Москва, Пресненская набережная, д.10 «Башня на Набережной», блок C, эт. 25
+            </address>
+          </div>
+        </div>
+      </section>
+    </main>
+    {% include 'pages/blocks/footer.html'%}
+  </div>  <!--id site-->
+  {% include 'pages/blocks/fixed_menu.html'%}
+  {% include 'pages/blocks/modals.html'%}
+  <script src="{% static 'js/scripts.min.js' %}"></script>
+</body>
+</html>

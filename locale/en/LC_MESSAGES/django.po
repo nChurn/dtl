@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-06 18:24+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: pages/templates/pages/about.html:41
+msgid "О компании<br /> PCG"
+msgstr "About<br /> PCG"
+
+#: pages/templates/pages/active.html:4 pages/templates/pages/active.html:10
+#: templates/header.html:18 templates/menu.html:21
+msgid "Активы"
+msgstr "Assets"
+
+#: pages/templates/pages/active.html:4 pages/templates/pages/active.html:10
+#: templates/header.html:21 templates/menu.html:23
+msgid "Проекты"
+msgstr "Projects"
+
+#: pages/templates/pages/active.html:76
+msgid "Роль<br /> PCG"
+msgstr "Role<br /> PCG"
+
+#: pages/templates/pages/actives.html:44
+msgid "Реализованные активы"
+msgstr "Exits"
+
+#: pages/templates/pages/actives.html:77
+msgid "Активы<br /> PCG"
+msgstr "PCG<br /> Assets"
+
+#: pages/templates/pages/career.html:28
+msgid "Специалистам"
+msgstr "For experienced professionals"
+
+#: pages/templates/pages/career.html:31 pages/templates/pages/career.html:39
+msgid "Отправить резюме"
+msgstr "Send CV"
+
+#: pages/templates/pages/career.html:36
+msgid "Студентам"
+msgstr "For university students and recent graduates"
+
+#: pages/templates/pages/career.html:46
+msgid "Преимущества работы в Proxima Capital Group:"
+msgstr "Why work for us:"
+
+#: pages/templates/pages/career.html:57
+msgid "Основные требования:"
+msgstr "Main requirements:"
+
+#: pages/templates/pages/ex_page.html:42
+msgid "Экспертиза<br /> PCG"
+msgstr "Expertise <br /> PCG"
+
+#: pages/templates/pages/expertise.html:31
+msgid "Подробнее"
+msgstr "Read more"
+
+#: pages/templates/pages/news.html:22 pages/templates/pages/projects.html:24
+#: pages/templates/pages/search.html:24
+msgid "Поиск..."
+msgstr "Search..."
+
+#: pages/templates/pages/news.html:26
+msgid "Все"
+msgstr "All"
+
+#: pages/templates/pages/news.html:27 templates/header.html:27
+#: templates/menu.html:24
+msgid "Новости"
+msgstr "News"
+
+#: pages/templates/pages/news.html:28
+msgid "Аналитические и экспертные материалы"
+msgstr "Research and expert reviews"
+
+#: pages/templates/pages/person.html:28
+msgid "Биография"
+msgstr "Bio"
+
+#: pages/templates/pages/person.html:40
+msgid "Направления деятельности"
+msgstr "Focus areas"
+
+#: pages/templates/pages/projects.html:32
+msgid "Все проекты"
+msgstr "All projects"
+
+#: pages/templates/pages/projects.html:38
+msgid "Все отрасли"
+msgstr "All sectors"
+
+#: pages/templates/pages/search.html:31
+msgid "Результаты поиска"
+msgstr "Searching results"
+
+#: pages/templates/pages/search.html:32
+msgid "Ничего не найдено"
+msgstr "Nothing found"
+
+#: templates/404.html:9
+msgid "Страницы с данным адресом не существует."
+msgstr "Page with this address doesn't exist"
+
+#: templates/404.html:10
+msgid "Вернуться на главную"
+msgstr "Go back to the main page"
+
+#: templates/header.html:9 templates/menu.html:12
+msgid "О Группе"
+msgstr "About"
+
+#: templates/header.html:11 templates/menu.html:14
+msgid "О нас"
+msgstr "Who We Are"
+
+#: templates/header.html:12 templates/menu.html:15
+msgid "Команда"
+msgstr "Team"
+
+#: templates/header.html:13 templates/menu.html:16
+msgid "Карьера"
+msgstr "Careers"
+
+#: templates/header.html:24 templates/menu.html:22
+msgid "Экспертиза"
+msgstr "Expertise"
+
+#: templates/header.html:30 templates/menu.html:25
+msgid "Контакты"
+msgstr "Contacts"
+
+#: templates/index.html:33
+msgid "Активы PCG"
+msgstr "PCG Assets"
+
+#: templates/index.html:44
+msgid "ключевые члены команды PCG"
+msgstr "Key PCG team members"
+
+#: templates/index.html:58
+msgid "ключевые проекты PCG"
+msgstr "Key PCG projects"
+
+#: templates/popup.html:6
+msgid "Мы рады видеть в своей команде профессионалов высокого уровня"
+msgstr "We are pleased to welcome highly qualified professionals to our team"
+
+#: templates/popup.html:8
+msgid "ФИО"
+msgstr "Full name"
+
+#: templates/popup.html:14
+msgid "Резюме (нажмите или перенесите файл)"
+msgstr "CV (click or drag file)"
+
+#: templates/popup.html:15
+msgid "Прикрепить Резюме"
+msgstr "Add CV"
+
+#: templates/popup.html:16
+msgid "Допустимые форматы:"
+msgstr "Acceptable formats:"
+
+#: templates/popup.html:16
+msgid "Максимальный объем файла:"
+msgstr "Maximum file size:"
+
+#: templates/popup.html:22
+msgid "Файл успешно загружен"
+msgstr "File successfully uploaded"
+
+#: templates/popup.html:27
+msgid ""
+"Нажимая кнопку Отправить, я даю согласие на обработку моих персональных "
+"данных."
+msgstr ""
+"By pressing the Send button, I agree that my personal data will be processed."
+
+#: templates/popup.html:28
+msgid "Отправить"
+msgstr "Send"
+
+#: templates/popup.html:29
+msgid "Для отправки формы необходимо заполнить обязательные поля"
+msgstr "To submit a form, you must fill in the required fields"
+
+#: templates/popup_ok.html:6
+msgid "Спасибо, ваше резюме принято. Мы&nbsp;свяжемся с&nbsp;вами."
+msgstr "Thank you, your resume is accepted. We will contact you."

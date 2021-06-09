@@ -1,0 +1,59 @@
+$b: 'footer';
+
+.#{$b}{
+  background-color: #282729;
+  color: #fff;
+  font-size: 18px;
+  padding: 92px 0 85px;
+  z-index: 2;
+  position: relative;
+
+  @media only screen and (max-width : $phone){
+    text-align: center;
+    font-size: 3.75vw;
+    text-align: center;
+    padding: 16.71875vw 0 13.28125vw;
+  }
+}
+
+.#{$b}_copy{
+  @media only screen and (max-width : $phone){
+    padding-bottom: 6.5625vw;
+  }
+}
+
+.#{$b}_redis{
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  a{
+    cursor: pointer;
+    color: $red;
+    position: relative;
+    display: inline-block;
+
+    &:after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $red;
+      position: absolute;
+      display: block;
+      bottom: 0;
+      transition: width 0.2s ease-out;
+    }
+
+    &:hover{
+      &:after{
+        width: 0;
+      }
+    }
+  }
+
+  @media only screen and (max-width : $phone){
+    position: relative;
+    display: block;
+  }
+}

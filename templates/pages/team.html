@@ -1,0 +1,335 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Proxima</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#000">
+
+  <!-- <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" sizes="180x180"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-32x32.png" sizes="32x32" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-16x16.png" sizes="16x16" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon"> -->
+
+  <!-- <link rel="stylesheet" href="css/main-first.min.css">	 -->
+  <link rel="stylesheet" href="{% static 'css/main.min.css'%} ">
+</head>
+<body>
+  {% include 'pages/blocks/metrika.html'%}
+  <div id="site">
+    {% include 'pages/blocks/header.html'%} 
+    <main class="main">
+      <section class="team">
+        <div class="container container-narrow">
+          <h1 class="title_common title_common-dark title_common-xs_bg team__title">
+            Команда Proxima&nbsp;Capital Group
+          </h1>
+          <div class="text team__text">
+            <p>
+              Главный актив <b class="colored">Proxima Capital Group</b> – наша команда.
+            </p>
+            <p>
+              Proxima Capital Group  объединяет профессионалов, обладающих операционным и инвестиционным опытом, экспертизой в инвестиционно-банковской сфере, корпоративных финансах и аудите,
+              юриспруденции, а также во взаимодействии с органами государственной власти. Каждый из
+              партнеров компании имеет более 15-ти лет опыта работы по своему направлению.
+            </p>
+          </div>
+          <h2 class="team__subtitle">
+            Управляющие партнёры
+          </h2>
+          <ul class="rst team__list">
+             {% for person in page.people.all %}
+            <li class="team__person person" data-simplebar>
+              <a href="{{person.slug}}">
+                <div class="person__img" style="background-image: url('{{ person.photo.url }}');"></div>
+                <h3 class="person__title">
+                  {{person.name}}
+                </h3>
+                <p class="person__position">
+                  {{person.position}}
+                </p>
+                <ul class="rst person__resp">
+                  <li>
+                    Рекапитализация компаний
+                    и реструктуризация задолженности
+                  </li>
+                  <li>
+                    Привлечение акционерного капитала и заемного финансирования
+                  </li>
+                  <li>
+                    Корпоративное управление
+                    и структурная реорганизация
+                  </li>
+                  <li>
+                    Слияния и поглощения
+                  </li>
+                </ul>
+              </a>
+            </li>
+            {% endfor %}
+            <!--<li class="team__person person" data-simplebar>
+              <a href="person-2.html">
+                <div class="person__img" style="background-image: url(img/upload/team/2.png);"></div>
+                <h3 class="person__title">
+                  Владимир Ермошин
+                </h3>
+                <p class="person__position">
+                  Управляющий партнер
+                </p>
+                <ul class="rst person__resp">
+                  <li>
+                    Рекапитализация компаний
+                    и реструктуризация задолженности
+                  </li>
+                  <li>
+                    Привлечение акционерного капитала и заемного финансирования
+                  </li>
+                  <li>
+                    Корпоративное управление
+                    и структурная реорганизация
+                  </li>
+                  <li>
+                    Слияния и поглощения
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="team__person person" data-simplebar>
+              <a href="#">
+                <div class="person__img" style="background-image: url(img/upload/team/3.png);"></div>
+                <h3 class="person__title">
+                Максим Кравченко
+                </h3>
+                <p class="person__position">
+                  Управляющий партнер
+                </p>
+                <ul class="rst person__resp">
+                  <li>
+                    Рекапитализация компаний
+                    и реструктуризация задолженности
+                  </li>
+                  <li>
+                    Привлечение акционерного капитала и заемного финансирования
+                  </li>
+                  <li>
+                    Корпоративное управление
+                    и структурная реорганизация
+                  </li>
+                  <li>
+                    Слияния и поглощения
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+          <h2 class="team__subtitle">
+            Ключевые сотрудники
+          </h2>
+          <ul class="rst team__list">
+            <li class="team__person person" data-simplebar>
+              <a href="#">
+                <div class="person__img" style="background-image: url(img/upload/team/4.png);"></div>
+                <h3 class="person__title">
+                  Вячеслав Давыдов
+                </h3>
+                <p class="person__position">
+                  Управляющий директор, Руководитель направления
+                  проблемных активов
+                </p>
+                <ul class="rst person__resp">
+                  <li>
+                    Рекапитализация компаний
+                    и реструктуризация задолженности
+                  </li>
+                  <li>
+                    Привлечение акционерного капитала и заемного финансирования
+                  </li>
+                  <li>
+                    Корпоративное управление
+                    и структурная реорганизация
+                  </li>
+                  <li>
+                    Слияния и поглощения
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="team__person person" data-simplebar>
+              <a href="#">
+                <div class="person__img" style="background-image: url(img/upload/team/5.png);"></div>
+                <h3 class="person__title">
+                  Евгений Третьяков
+                </h3>
+                <p class="person__position">
+                  Управляющий директор,
+                  Руководитель направления M&A
+                </p>
+                <ul class="rst person__resp">
+                  <li>
+                    Рекапитализация компаний
+                    и реструктуризация задолженности
+                  </li>
+                  <li>
+                    Привлечение акционерного капитала и заемного финансирования
+                  </li>
+                  <li>
+                    Корпоративное управление
+                    и структурная реорганизация
+                  </li>
+                  <li>
+                    Слияния и поглощения
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="team__person person" data-simplebar>
+              <a href="#">
+                <div class="person__img" style="background-image: url(img/upload/team/6.png);"></div>
+                <h3 class="person__title">
+                  Ольга Загвоздкина
+                </h3>
+                <p class="person__position">
+                  Директор, группа собственных инвестиций
+                </p>
+                <ul class="rst person__resp">
+                  <li>
+                    Рекапитализация компаний
+                    и реструктуризация задолженности
+                  </li>
+                  <li>
+                    Привлечение акционерного капитала и заемного финансирования
+                  </li>
+                  <li>
+                    Корпоративное управление
+                    и структурная реорганизация
+                  </li>
+                  <li>
+                    Слияния и поглощения
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="team__person person" data-simplebar>
+              <a href="#">
+                <div class="person__img" style="background-image: url(img/upload/team/7.png);"></div>
+                <h3 class="person__title">
+                  Сергей Брякин
+                </h3>
+                <p class="person__position">
+                  Управляющий директор, направление проблемных активов
+                </p>
+                <ul class="rst person__resp">
+                  <li>
+                    Рекапитализация компаний
+                    и реструктуризация задолженности
+                  </li>
+                  <li>
+                    Привлечение акционерного капитала и заемного финансирования
+                  </li>
+                  <li>
+                    Корпоративное управление
+                    и структурная реорганизация
+                  </li>
+                  <li>
+                    Слияния и поглощения
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="team__person person" data-simplebar>
+              <a href="#">
+                <div class="person__img" style="background-image: url(img/upload/team/8.png);"></div>
+                <h3 class="person__title">
+                  Николай Кауркин
+                </h3>
+                <p class="person__position">
+                  Финансовый директор
+                </p>
+                <ul class="rst person__resp">
+                  <li>
+                    Рекапитализация компаний
+                    и реструктуризация задолженности
+                  </li>
+                  <li>
+                    Привлечение акционерного капитала и заемного финансирования
+                  </li>
+                  <li>
+                    Корпоративное управление
+                    и структурная реорганизация
+                  </li>
+                  <li>
+                    Слияния и поглощения
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="team__person person" data-simplebar>
+              <a href="#">
+                <div class="person__img" style="background-image: url(img/upload/team/9.png);"></div>
+                <h3 class="person__title">
+                  Елена Мирская
+                </h3>
+                <p class="person__position">
+                  Управляющий директор по правовым и корпоративным вопросам
+                </p>
+                <ul class="rst person__resp">
+                  <li>
+                    Рекапитализация компаний
+                    и реструктуризация задолженности
+                  </li>
+                  <li>
+                    Привлечение акционерного капитала и заемного финансирования
+                  </li>
+                  <li>
+                    Корпоративное управление
+                    и структурная реорганизация
+                  </li>
+                  <li>
+                    Слияния и поглощения
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="team__person person" data-simplebar>
+              <a href="#">
+                <div class="person__img" style=""></div>
+                <h3 class="person__title">
+                  Инна Ерохина
+                </h3>
+                <p class="person__position">
+                  Директор по внешним связям
+                </p>
+                <ul class="rst person__resp">
+                  <li>
+                    Рекапитализация компаний
+                    и реструктуризация задолженности
+                  </li>
+                  <li>
+                    Привлечение акционерного капитала и заемного финансирования
+                  </li>
+                  <li>
+                    Корпоративное управление
+                    и структурная реорганизация
+                  </li>
+                  <li>
+                    Слияния и поглощения
+                  </li>
+                </ul>
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </section>
+    </main>
+    {% include 'pages/blocks/footer.html'%}
+  </div>  <!--id site-->
+  {% include 'pages/blocks/fixed_menu.html'%}
+  {% include 'pages/blocks/modals.html'%}
+  <script src="{% static 'js/scripts.min.js' %}" ></script>
+</body>
+</html>

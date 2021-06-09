@@ -1,0 +1,270 @@
+$b: 'header';
+
+.#{$b}{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 40px 0;
+  z-index: 10;
+  opacity: 0;
+
+  &:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+
+  @media only screen and (max-width : $tablet){
+    padding-bottom: 20px;
+    padding-top: 38px;
+    opacity: 1;
+    width: 100%;
+  }
+
+  @media only screen and (max-width : $phone){
+    padding-bottom: 3.125vw;
+    padding-top: 5.9375vw;
+  }
+
+  &.fixed{
+    position: fixed;
+    opacity: 1;
+    transform: translateY(-135px);
+    animation: none !important;
+
+    &:before{
+      background-color: rgba(255,255,255,0.7);
+    }
+  }
+
+  &.unfixed{
+    animation: none !important;
+    opacity: 1;
+  }
+
+  &.showed{
+    animation: showMenu 0.5s ease forwards !important;
+    opacity: 1;
+  }
+  &.hided{
+    animation: hideMenu 0.5s ease forwards !important;
+  }
+
+  &.-light{
+    color: #fff;
+    &:before{
+      background-color: rgba(0,0,0,0.7);
+    }
+
+    .#{$b}_langs{
+      &:before{
+        background-color: #fff;
+      }
+    }
+
+    .#{$b}_burger{
+      svg{
+        fill: #fff;
+      }
+    }
+
+    .#{$b}_menu{
+      background-color: rgba(0,0,0,0.7);
+    }
+  }
+
+  &.-index{
+    color: #fff;
+    &:before{
+      display: none
+    }
+
+    .#{$b}_langs{
+      &:before{
+        background-color: #fff;
+      }
+    }
+
+    .#{$b}_burger{
+      svg{
+        fill: #fff;
+      }
+    }
+
+    .#{$b}_menu{
+      background-color: transparent;
+    }
+  }
+
+  &.index-animated{
+    animation: fadeInDown 1s ease forwards;
+    animation-delay: 2s;
+  }
+
+  &.animated{
+    animation: fadeInDown 1s ease forwards;
+    animation-delay: 0.5s;
+  }
+}
+
+.#{$b}_burger{
+  svg{
+    fill: $black;
+  }
+}
+
+.#{$b}_burger.index_headline-burger{
+  display: none;
+
+  @media only screen and (max-width : $tablet){
+    display: block;
+    top: 18px;
+  }
+
+  @media only screen and (max-width : $phone){
+    top:2.8125vw;
+  }
+}
+
+.#{$b}_logo{
+  width: 150px;
+  height: 55px;
+  display: block;
+  margin-left: -100px;
+
+  @media only screen and (max-width : $tablet){
+    width: 176px;
+    height: 60px;
+    margin-left: 0;
+  }
+
+  @media only screen and (max-width : $phone){
+    width: 27.5vw;
+    height: 9.375vw;
+  }
+}
+
+.#{$b}_nav{
+  position: absolute;
+  right: -80px;
+  top: 21px;
+
+  @media only screen and (max-width : $tablet){
+    display: none;
+  }
+}
+
+.#{$b}_items{
+  display: block;
+  position: relative;
+  right: 124px;
+}
+
+.#{$b}_item{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 37px;
+  cursor: pointer;
+
+  &:hover{
+    .#{$b}_menu{
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.#{$b}_link{
+  font-size: 18px;
+  font-family: $medium;
+  transition: color 0.35s;
+  position: relative;
+  z-index: 1;
+
+  &.-active, &:hover{
+    color: $red;
+  }
+}
+
+.#{$b}_menu{
+  position: absolute;
+  padding: 0 50px 0 20px;
+  padding-top: 50px;
+  top: -20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s;
+  margin-left: -20px;
+  box-sizing: border-box;
+  background-color: rgba(255,255,255,0.3);
+
+
+  .#{$b}_link{
+    display: block;
+    margin-bottom: 13px;
+  }
+}
+
+@keyframes showMenu {
+  from{
+    transform: translateY(-135px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+
+@keyframes hideMenu {
+  from{
+    transform: translateY(0px);
+  }
+  to{
+    transform: translateY(-135px);
+    position: absolute;
+  }
+}
+
+.#{$b}_langs{
+  display: block;
+  position: absolute;
+  right: -17px;
+  top: -2px;
+
+  &:before{
+    content: '';
+    display: inline-block;
+    width: 1px;
+    background-color: rgba(50,50,50,0.1);
+    height: 19px;
+    margin-right: 10px;
+  }
+}
+
+.#{$b}_lang{
+  font-size: 14px;
+  font-family: $bold;
+  transition: color 0.35s;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 6px;
+  margin-left: 4px;
+  cursor: pointer;
+
+  &.-active{
+    cursor: default;
+  }
+
+  &.-active, &:hover{
+    color: $red;
+  }
+}
+

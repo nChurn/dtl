@@ -1,0 +1,13 @@
+{% load i18n %}
+{% for p in items %}
+  <a href="{% url 'project' p.slug %}" class="actives_item">
+    <div class="actives_item-bg bg" style="background-image:url({{ p.photo.url }})"></div>
+    <div class="actives_item-img" style="background-image:url({{ p.logo.url }})"></div>
+    <h4 class="actives_item-title">{{ p.client }}</h4>
+    {% if p.title_preview %}
+    	<p class="actives_item-text">{{ p.title_preview|safe }}</p>
+    {% else %}
+    	<p class="actives_item-text">{{ p.title|safe }}</p>
+    {% endif %}
+  </a>
+{% endfor %}

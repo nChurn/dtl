@@ -1,0 +1,377 @@
+$b: 'popup';
+
+.#{$b}{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow: hidden;
+  display: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.#{$b}_wrapper{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.#{$b}_content{
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 100px;
+
+  @media only screen and (max-width : $tablet){
+    padding: 0;
+  }
+}
+
+.#{$b}_close{
+  position: absolute;
+  right: 100px;
+  top: 90px;
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+
+  @media only screen and (max-width : $tablet){
+    right: 0;
+  }
+
+  @media only screen and (max-width : $phone){
+    top: 7.03125vw;
+    width: 5.15625vw;
+    height: 5.15625vw;
+  }
+
+  svg{
+    fill: $black;
+    transition: fill 0.35s;
+  }
+
+  &:hover{
+    svg{
+      fill: $red;
+    }
+  }
+}
+
+.#{$b}_text{
+  font-size: 42px;
+  line-height: 57px;
+  padding-top: 194px;
+
+  @media only screen and (max-width : $phone){
+    font-size: 6.5625vw;
+    line-height: 8.90625vw;
+    padding-top: 23.4375vw;
+    padding-right: 7.8125vw;
+    box-sizing: border-box;
+  }
+}
+
+.#{$b}_form{
+  margin-top: 70px;
+  padding-bottom: 190px;
+  position: relative;
+
+  @media only screen and (max-width : $phone){
+    margin-top: 8.90625vw;
+    padding-bottom: 30.625vw;
+  }
+}
+
+.#{$b}_form-error{
+  color: $red;
+  font-size: 18px;
+  line-height: 23px;
+  position: absolute;
+  right: 0;
+  margin-top: -57px;
+  display: inline-block;
+  vertical-align: top;
+  width: 425px;
+  display: none;
+
+  @media only screen and (max-width : $tablet){
+    width: 230px;
+    margin-top: -69px;
+  }
+
+  @media only screen and (max-width : $phone){
+    width: 100%;
+    margin-top: 3vw;
+  }
+}
+
+.#{$b}_input{
+  display: block;
+  -webkit-appearance: none;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 21px;
+  height: 64px;
+  margin-bottom: 29px;
+  padding: 0 18px;
+  border: 1px solid #d6d6d6;
+
+  &.error{
+    border-color: $red;
+  }
+
+  @media only screen and (max-width : $phone){
+    height: 12.34375vw;
+    margin-bottom: 4.53125vw;
+    font-size: 4.375vw;
+    padding: 0 3.75vw;
+  }
+}
+
+.#{$b}_input-file{
+  display: block;
+  width: 100%;
+  height: 160px;
+  margin-bottom: 30px;
+  outline: none;
+  cursor: pointer;
+
+  @media only screen and (max-width : $phone){
+    height: 43.75vw;
+    margin-bottom: 0;
+  }
+
+  &.draged{
+    & + .#{$b}_file{
+      background-color: #fff;
+      border: 3px dashed #d6d6d6;
+
+      .start{
+        display: none;
+      }
+      .popup_plus{
+        display: block;
+      }
+    }
+  }
+
+  &.loaded{
+    & + .#{$b}_file{
+      pointer-events: all;
+      .start{
+        display: none;
+      }
+      .popup_result{
+        display: block;
+      }
+    }
+  }
+}
+
+.#{$b}_result{
+  display: none;
+}
+
+.#{$b}_file-reset{
+  display: inline-block;
+  vertical-align: top;
+  width: 13px;
+  height: 13px;
+  margin-top: 53px;
+  margin-left: 7px;
+  cursor: pointer;
+
+  svg{
+    fill: $black;
+    transition: fill 0.35s;
+  }
+
+  &:hover{
+    svg{
+      fill: $red;
+    }
+  }
+}
+
+.#{$b}_file{
+  position: absolute;
+  width: 100%;
+  background-color: #e6e6e6;
+  height: 160px;
+  margin-top: -190px;
+  z-index: 1;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  pointer-events: none;
+
+  @media only screen and (max-width : $tablet){
+    width: 100%;
+  }
+
+  @media only screen and (max-width : $phone){
+    height: 43.75vw;
+    margin-top: -43.75vw;
+    padding: 0 3.75vw;
+    box-sizing: border-box;
+    text-align: left;
+  }
+}
+
+.#{$b}_button{
+  margin-top: 60px;
+  display: inline-block;
+
+  @media only screen and (max-width : $tablet){
+    margin-top: 30px;
+  }
+
+  @media only screen and (max-width : $phone){
+    margin-top: 8.75vw;
+  }
+}
+
+.#{$b}_file-title{
+  font-size: 21px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  display: inline-block;
+
+  &.mobile{
+    display: none;
+    @media only screen and (max-width : $tablet){
+      display: block;
+    }
+  }
+
+  @media only screen and (max-width : $tablet){
+    display: none;
+  }
+
+  @media only screen and (max-width : $phone){
+    font-size: 5vw;
+    padding-top: 6.5625vw;
+    padding-bottom: 3.125vw;
+  }
+}
+
+.#{$b}_file-text{
+  color: #999999;
+  font-size: 18px;
+  line-height: 23px;
+
+  br.mobile{
+    display: none;
+  }
+
+  @media only screen and (max-width : $phone){
+    font-size: 4.6875vw;
+    line-height: 7.03125vw;
+
+    br.mobile{
+      display: block;
+    }
+  }
+}
+
+.#{$b}_file-icon{
+  position: absolute;
+  right: 39px;
+  bottom: -18px;
+  width: 110px;
+  height: 158px;
+  display: block;
+  z-index: -1;
+
+  svg{
+    fill: #d6d6d6;
+  }
+
+  @media only screen and (max-width : $tablet){
+    bottom: 37px;
+  }
+
+  @media only screen and (max-width : $phone){
+    bottom: 14.0625vw;
+    right: -1.875vw;
+    width: 17.1875vw;
+    height: 24.6875vw;
+  }
+}
+
+.#{$b}_plus{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: #d6d6d6;
+  font-family: $bold;
+  margin-top: 15px;
+  display: none;
+}
+
+.#{$b}_checkbox{
+  opacity: 0;
+
+  &:checked{
+    & + .#{$b}_checkbox-icon{
+      span{
+        display: block;
+      }
+    }
+  }
+  &.error{
+    & + .#{$b}_checkbox-icon{
+      border-color: $red;
+    }
+  }
+}
+
+.#{$b}_checkbox-icon{
+  display: block;
+  width: 27px;
+  height: 27px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-left: -22px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 7px 4px;
+
+  span{
+    display: none;
+  }
+
+  @media only screen and (max-width : $phone){
+    margin-top: 5vw;
+    margin-left: -3.4375vw;
+    width: 6.25vw;
+    height: 6.25vw;
+    padding: 1.40625vw 0.625vw;
+  }
+}
+
+.#{$b}_checkbox-text{
+  font-size: 18px;
+  color: #999999;
+  margin-top: 7px;
+  display: inline-block;
+  margin-left: 12px;
+
+  @media only screen and (max-width : $tablet){
+    margin-top: -1px;
+    margin-left: 10px;
+    width: 90%;
+  }
+
+  @media only screen and (max-width : $phone){
+    font-size: 4.0625vw;
+    margin-top: 4.6875vw;
+    margin-left: 1.875vw;
+    width: 82%;
+  }
+}

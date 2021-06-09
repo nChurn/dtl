@@ -1,0 +1,13 @@
+psycopg2
+gunicorn>=19.7,<19.8
+
+Django>=1.11,<1.12
+django-split-settings==0.2.5
+django-summernote==0.8.7
+pycparser==2.18
+django-modeltranslation==0.12.2
+
+
+
+Pillow
+pyparsing

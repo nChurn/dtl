@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Proxima</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#000">
+
+  <!-- <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" sizes="180x180"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-32x32.png" sizes="32x32" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-16x16.png" sizes="16x16" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon"> -->
+
+  <!-- <link rel="stylesheet" href="css/main-first.min.css">	 -->
+  <link rel="stylesheet" href="{% static 'css/main.min.css'%}">
+</head>
+<body>
+  {% include 'pages/blocks/metrika.html'%}
+  <div id="site">
+    {% include 'pages/blocks/header.html'%}
+    <main class="main">
+      <section class="active">
+        <div class="active__top">
+          <div class="container">
+            <div class="active__content">
+              <div class="active__img" style="background-image: url({{page.photo_head.url}})"></div>
+              <div class="active__caption">
+                <p class="active__pretitle">
+                  {{page.subtitle}}
+                </p>
+                <h2 class="active__title">
+                  {{page.title}}
+                </h2>
+                <p class="active__desc">
+                  {{ page.client }}
+                </p>
+                <div class="active__logo">
+                  <img src="url({{ page.logo_head.url}})" alt="">
+                </div>
+              </div>
+              <ul class="rst active__info">
+                <li>
+                  {{ page.per}}
+                </li>
+                <li>
+                  {{page.geo}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="active__description">
+          <div class="container container-narrow">
+            <div class="text active__text">
+              <p>
+                <b class="colored">YouDrive</b> {{ page.text}}
+              </p>
+              <!--
+                <p>
+                YouDrive обладает одной из
+                самых технологичных на рынке ИТ-платформ, высоким уровнем лояльности
+                клиентов, отличной репутацией, что делает компанию привлекательной
+                платформой для развития.
+                Для всех партнеров YouDrive является стратегической инвестицией.
+              </p>
+              <p>
+                Цель проекта – существенно масштабировать бизнес, развить новые
+                направления деятельности, комплементарные услугам краткосрочной
+                аренды, а также реализовать синергии с другими бизнесами O2O
+                Холдинга и платформами Mail.Ru Group и Сбербанка.
+                Наряду с финансированием компании партнеры оказывают
+                YouDrive также операционную поддержку, дополняя и расширяя
+                экспертизу компании, в том числе в работе с автопроизводителями,
+                лизинговыми компаниями, банками, а также в развитии новых
+                продуктов.
+              </p>
+              <p>
+                С марта по август 2019 года <b class="colored">Proxima Capital Group</b> владела миноритарным
+                пакетом в компании. В августе 2019 года СП Mail.RU Group и Proxima Capital
+                Group получило контроль в YouDrive. С декабря 2019 года партнером PCG в&nbsp;проекте стал O2O Холдинг, СП Mail.Ru Group и Сбербанка.
+                В компании были реализованы следующие мероприятия:
+              </p>
+            -->
+              <ul class="rst list_custom list_custom-red">
+                <li>
+                  Докапитализация компании
+                </li>
+                <li>
+                  Старт активного развития: вывод на линию более 3000 автомобилей в
+                  городах присутствия, существенное укрепление позиций в Санкт-Петербурге
+                </li>
+                <li>
+                  Объединение технологий и ресурсов для развития маркетинга, IТ-
+                  инфраструктуры и других направлений бизнеса с сервисом заказа такси
+                  «Ситимобил»
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {% include 'pages/blocks/footer.html' %}
+  </div>  <!--id site-->
+  {% include 'pages/blocks/fixed_menu.html' %}
+  {% include 'pages/blocks/modals.html' %}
+  <script src="{% static 'js/scripts.min.js' %}"></script>
+</body>
+</html>

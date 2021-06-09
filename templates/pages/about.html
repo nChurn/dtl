@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Proxima</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#000">
+
+  <!-- <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" sizes="180x180"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-32x32.png" sizes="32x32" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-16x16.png" sizes="16x16" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon"> -->
+
+  <!-- <link rel="stylesheet" href="css/main-first.min.css">	 -->
+  <link rel="stylesheet" href="{% static 'css/main.min.css'%}">
+</head>
+<body>
+  {% include 'pages/blocks/metrika.html'%}
+  <div id="site">
+    {% include 'pages/blocks/header.html'%}
+    <main class="main">
+      <section class="title_block" style="background-image: url({% static 'img/upload/banner-about.jpg'%});">
+        <div class="container container-narrow title_block__container">
+          <h1 class="title_common title_common-bg">
+            О компании <br>Proxima&nbsp;Capital Group
+          </h1>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container container-narrow">
+          <div class="about__info">
+            <div class="text about__text">
+              <p>
+                Российская инвестиционная компания <b class="colored">Proxima Capital Group</b> основана в 2013 году. Компания работает в двух основных направлениях -  инвестиции собственных средств в капитал непубличных компаний и оказание консалтинговых услуг по двум линиям: инвестиционно- банковские услуги, а также услуги по работе с проблемной задолженностью и активами.
+              </p>
+            </div>
+          </div>
+          <div class="about__links">
+            <a class="btn btn_beautiful_link_2 about__link-sm_mb" href="consulting.html">
+              Консалтинговые услуги
+            </a>
+            <a class="btn btn_beautiful_link_2" href="active.html">
+              Собственные инвестиции
+            </a>
+          </div>
+          <div class="about__strategy">
+            <h2 class="title_default about__title">
+              Стратегия развития
+            </h2>
+            <div class="text about__text">
+              <p>
+                Мы уделяем равное внимание развитию консалтинговых услуг и собственных инвестиций,
+                реализуя синергии между направлениями.
+              </p>
+              <p>
+                Опыт инвестирования и развития собственных проектов позволяет нам гораздо лучше
+                понимать наших клиентов и задачи, стоящие перед ними и их бизнесом, и предлагать им
+                решения не только с позиции финансового консультанта, но и собственника бизнеса, несущего
+                ответственность за принимаемые решения.
+              </p>
+              <p>
+                Полноценная вовлеченность в консалтинговый бизнес, в свою очередь, дает доступ к
+                уникальной информации на рынке, возможность расширять сеть контактов и получать
+                дополнительный доступ к новым инвестиционным возможностям. При этом мы всегда
+                тщательно следим за тем, чтобы у нас не возникало конфликта интересов с нашими
+                клиентами.
+              </p>
+            </div>
+          </div>
+          <div class="about__mission">
+            <h2 class="title_default about__title">
+              Миссия
+            </h2>
+            <div class="text about__text">
+              <p>
+                Мы решаем проблемы и помогаем достигать поставленные цели – нашим клиентам, их бизнесу, нашим портфельным компаниям и бизнес-партнерам.
+              </p>
+            </div>
+          </div>
+          <div class="about__worth">
+            <h2 class="title_default about__title">
+              Ценности
+            </h2>
+            <div class="text about__text_block">
+                Текстовый блок Intro раздела
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {% include 'pages/blocks/footer.html'%}
+  </div>  <!--id site-->
+  {% include 'pages/blocks/fixed_menu.html'%}
+  {% include 'pages/blocks/modals.html'%}
+  <script src="{% static 'js/scripts.min.js'%} "></script>
+</body>
+</html>

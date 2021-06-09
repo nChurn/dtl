@@ -1,0 +1,12 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<footer class="footer">
+  <div class="wrapper">
+    <p class="footer_copy">© Proxima Capital Group</p>
+    {% if LANGUAGE_CODE == 'ru' %}
+      <p class="footer_redis"><a href="http://red-is.ru/" target="_blank">Redis</a> — создание сайта</p>
+    {% else %}
+      <p class="footer_redis">Website design by <a href="http://red-is.ru/" target="_blank">Redis</a></p>
+    {% endif %}
+  </div>
+</footer>

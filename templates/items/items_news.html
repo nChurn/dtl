@@ -1,0 +1,8 @@
+{% for new in items %}
+  <a href="{% url 'new' new.id %}" class="actives_item">
+    <div class="actives_item-bg bg" style="background-image:url({{ new.photo.url }})"></div>
+    <h5 class="actives_item-number">{{ new.date|date:"d" }}</h5>
+    <h4 class="actives_item-title">{{ new.date|date:"F Y" }}</h4>
+    <p class="actives_item-text">{{ new.title|safe }}</p>
+  </a>
+{% endfor %}

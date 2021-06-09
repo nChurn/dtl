@@ -1,0 +1,13 @@
+image: redisca/bitbucket-pipelines:ubuntu-16.04
+
+pipelines:
+  branches:
+    default:
+      - step:
+          script:
+            - npm install
+            - ./node_modules/.bin/gulp default
+            - grep -iv -e 'pillow' -e 'psycopg2' -e 'lxml' requirements.txt > /tmp/pipelines.txt
+            - pip3 install -r /tmp/pipelines.txt
+            - python3 manage.py collectstatic
+            - ansible/play.sh stage deploy

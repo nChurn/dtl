@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>{{pa}}</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#000">
+
+  <!-- <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" sizes="180x180"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-32x32.png" sizes="32x32" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-16x16.png" sizes="16x16" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon"> -->
+
+  <!-- <link rel="stylesheet" href="css/main-first.min.css">	 -->
+  <link rel="stylesheet" href="{% static 'css/main.min.css'%}">
+</head>
+<body>
+  {% include 'pages/blocks/metrika.html'%}
+  <div id="site">
+    {% include 'pages/blocks/header.html'%}
+    <main class="main">
+      <section class="news_page">
+        <div class="container container-narrow">
+          <span class="news_page__date">
+            21 Апреля 2021
+          </span>
+          <h2 class="news_page__title">
+            Proxima Capital Group открыла в Новосибирске первый оптово-распределительный центр «РусАгроМаркет»
+          </h2>
+          <p class="news_page__desc">
+            Смелый, уникальный для России формат, рассчитанный на клиентов любой категории
+          </p>
+          <ul class="rst news_page__tags">
+            <li class="news_page__tag">
+              <a class="news_page__tag_link" href="#">
+                #Аналитика
+              </a>
+            </li>
+            <li class="news_page__tag">
+              <a class="news_page__tag_link" href="#">
+                #Новость
+              </a>
+            </li>
+            <li class="news_page__tag">
+              <a class="news_page__tag_link" href="#">
+                #Новосибирск
+              </a>
+            </li>
+          </ul>
+          <div class="news_page__text">
+            <p>
+              В Новосибирске начал работу первый оптово-распределительный центр (ОРЦ) федеральной сети «РусАгроМаркет». Инвестиции в проект составили 8,6 млрд рублей. В торжественном открытии приняли участие губернатор Новосибирской области Андрей Травников, генеральный директор Агентства инвестиционного развития Новосибирской области Александр Зырянов и учредители холдинга «Русагромаркет».
+            </p>
+            <p>
+              ОРЦ — это современная многофункциональная торгово-логистическая площадка, предоставляющая игрокам продовольственного рынка доступ к услугам хранения, доработки, фасовки, сбыта и комплексной логистики «фреш»-продукции. Создаваемая на базе оптово-распределительного центра цифровая инфраструктура и единая электронная платформа «маркетплейс» позволят находить поставщиков и покупателей продуктов питания в режиме реального времени.
+            </p>
+            <p>
+              Объект открыт на территории «Промышленно-логистического парка и служит активному развитию агропромышленного и инвестиционного потенциала Новосибирской области. Общая площадь первой очереди новосибирского проекта составляет 103 тыс. кв. м. ОРЦ включает в себя два мультитемпературных и морозильный терминалы, а также павильоны для оптовой торговли, вспомогательные, технические здания и сооружения.
+            </p>
+            <p>
+              Андрей Травников отметил, что по своим масштабам даже первая очередь нового проекта – это целый городок логистических центров. «Смелый, уникальный для России формат, рассчитанный на клиентов любой категории, любого масштаба – от фермера до крупного оптовика и дистрибьютора. Это особенно важно для Новосибирской области, потому что мы активно развиваем малый и средний бизнес, и поддерживаем проекты, особенно в агропромышленной сфере, направленные на развитие внутри-региональной кооперации. Уверен, что этот продовольственный парк будет сильным интегратором, хорошим стимулом для развития деловых и производственных связей между нашими сельхозпроизводителями, переработчиками, потребляющими сетями и организациями».
+            </p>
+            <p>
+              АО «Агентство инвестиционного развития Новосибирской области» комплексно сопровождает инвестиционный проект компании «РусАгроМаркет-Новосибирск» по созданию в Новосибирской области пилотного объекта ОРЦ. «Мы и видим впечатляющие результаты проделанной работы. Мы верим, что «РосАгроМаркет» станет драйвером развития для производителей сельскохозяйственной и пищевой продукции региона», - говорит генеральный директор АИР Александр Зырянов.
+            </p>
+            <p>
+              «Это первый на территории России проект, обладающий всеми самыми современными качествами – это и IT-инфраструктура, и логистическая составляющая, и современные площади для хранения, доработки, переработки, упаковки и отгрузки продукции. Мы ещё только в начале пути, и всё самое главное нам ещё предстоит осуществить с помощью сибиряков здесь, на новосибирской земле», - считает управляющий партнер Proxima Capital Group Владимир Ермошин.
+            </p>
+            <p>
+              Основными инвесторами «РосАгроМаркет» являются Государственная корпорация развития ВЭБ.РФ и инвестиционная компания Proxima Capital Group.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="news_similar">
+        <h2 class="title-hidden">Похожие новости</h2>
+        <div class="container container-narrow">
+          <ul class="rst news_similar__items">
+            <li class="news_similar__item">
+              <a class="news_similar__link" href="#">
+                <div class="news_similar__img" style="background-image: url({% static 'img/upload/news/1.jpg'%});"></div>
+                <h3 class="news_similar__title">
+                  Управляющие партнеры <b class="colored">Proxima Capital Group</b> приняли участие в Первом Евразийском конгрессе
+                </h3>
+              </a>
+            </li>
+            <li class="news_similar__item">
+              <a class="news_similar__link" href="#">
+                <div class="news_similar__img" style="background-image: url({% static 'img/upload/news/1.jpg' %});"></div>
+                <h3 class="news_similar__title">
+                  Запущены новые линии на <br class="from-md">одном из комбинатов UPG
+                </h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    {% include 'pages/blocks/footer.html'%}
+  </div>  <!--id site-->
+  {% include 'pages/blocks/fixed_menu.html'%}
+  {% include 'pages/blocks/modals.html'%}
+  <script src=" {% static 'js/scripts.min.js' %}"></script>
+</body>
+</html>

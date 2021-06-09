@@ -1,0 +1,1270 @@
+body{
+  font-family: $regular;
+  color: $black;
+
+  &.-opened-popup{
+    overflow: hidden;
+  }
+}
+
+.preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.main{
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.wrapper{
+  width: 970px;
+  min-height: 100%;
+  position: relative;
+  margin: 0 auto;
+
+  @media only screen and (max-width : $tablet){
+    width: 580px;
+  }
+
+  @media only screen and (max-width : $phone){
+    width: 90.625vw;
+  }
+}
+
+.text, .text p, .text span{
+  font-size: 42px;
+  line-height: 67px;
+
+  &.-light{
+    color: #fff;
+  }
+
+  i, p i{
+    color: $red;
+  }
+
+  @media only screen and (max-width : $phone){
+    font-size: 6.5625vw;
+    line-height: 10.46875vw;
+  }
+}
+
+.subtext{
+  font-size: 22px;
+  line-height: 45px;
+
+  ol{
+    list-style-type: decimal;
+  }
+  ul{
+    list-style-type: disc;
+  }
+
+  b{
+    font-family: $bold;
+  }
+
+  p{
+    padding-bottom: 10px;
+  }
+
+  @media only screen and (max-width : $phone){
+    font-size: 4.6875vw;
+    line-height: 7.96875vw;
+  }
+}
+
+.small-text{
+  font-size: 18px;
+  line-height: 30px;
+
+  @media only screen and (max-width : $phone){
+    font-size: 4.6875vw;
+    line-height: 7.8125vw;
+  }
+}
+
+label.error{
+  display: none !important;
+}
+
+.right-text{
+  padding-left: 400px;
+
+  &.right-more{
+    padding-left: 500px;
+  }
+
+  &.right-less{
+    padding-left: 334px;
+  }
+
+  @media only screen and (max-width : $tablet){
+    padding-left: 0px;
+
+    &.right-more{
+      padding-left: 0px;
+    }
+
+    &.right-less{
+      padding-left: 0px;
+    }
+  }
+}
+
+.separator{
+  width: 18px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &.js-fade{
+    opacity: 1;
+    transform: none;
+  }
+
+  span{
+    transform: skewX(36deg);
+    background-color: $red;
+    width: 100%;
+    height: 0%;
+    display: block;
+
+    @media only screen and (max-width : $tablet){
+      height: 100%;
+    }
+  }
+
+  @media only screen and (max-width : $phone){
+    width: 3.875vw;
+    height: 5.15625vw;
+  }
+
+  &.faded{
+    span{
+      animation: separatorAnimation 0.6s ease forwards;
+    }
+  }
+}
+
+.bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button{
+  outline: none;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: $bold;
+  height: 70px;
+  box-sizing: border-box;
+  background-color: transparent;
+  width: 325px;
+  color: $black;
+  padding-top: 6px;
+  letter-spacing: 0.8px;
+  transition: all 0.35s;
+
+  &.-light{
+    color: #fff;
+    border-color: rgba(255,255,255,0.2);
+
+    span{
+      svg{
+        fill: #fff;
+      }
+    }
+
+    &:hover{
+      border-color: rgba(255,255,255,1);
+    }
+  }
+
+  span{
+    width: 6px;
+    display: inline-block;
+    vertical-align: top;
+    height: 11px;
+    margin-left: 6px;
+
+    svg{
+      fill: $black;
+    }
+
+    @media only screen and (max-width : $phone){
+      width: 1.5625vw;
+      margin-left: 1.5625vw;
+      height: 2.34375vw;
+    }
+  }
+
+  &:hover{
+    border: 1px solid rgba(0,0,0,1);
+  }
+
+  @media only screen and (max-width : $phone){
+    width: 100%;
+    font-size: 3.125vw;
+    height: 15.625vw;
+  }
+}
+
+.page{
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+
+  &.animated{
+    .page_headline-title{
+      span{
+        svg{
+          #logo{
+            animation: svgOffsetAnimation 1s ease forwards;
+            animation-delay: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page_headline{
+  box-sizing: border-box;
+  position: relative;
+  padding: 135px 0 0;
+  min-height: 450px;
+
+  .wrapper{
+    min-height: 310px;
+    @media only screen and (max-width : $phone){
+      min-height: 44vw;
+    }
+  }
+
+  @media only screen and (max-width : $phone){
+    padding: 21.09375vw 0 0;
+    min-height: 65vw;
+  }
+
+  &.-big{
+    background-size: cover;
+    z-index: -1;
+    background-position: center;
+
+
+    @media only screen and (max-width : $tablet){
+      padding-top: 135px;
+    }
+
+    @media only screen and (max-width : $phone){
+      padding-top: 30vw;
+    }
+
+    .page_headline-title{
+      font-size: 80px;
+      line-height: 100px;
+      color: #fff;
+      padding: 122px 0 112px;
+      position: relative;
+      width: calc(100% + 30px);
+      animation-delay: 0.8s;
+
+      span.title-text{
+        display: block;
+        position: relative;
+        left: 0;
+        z-index: 1;
+        top:0;
+        width: 100%;
+        height: 100%;
+        animation: lightRedAnimation 1s ease forwards;
+        animation-delay: 1.2s;
+        opacity: 0;
+        transform: translateY(-30px);
+
+        @media only screen and (max-width : $tablet){
+          animation: none;
+          opacity: 1;
+        }
+
+        @media only screen and (max-width : $phone){
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      span.logo{
+        z-index: -1;
+        left: -215px;
+        top: 7px;
+        width: 536px;
+        height: 340px;
+        background-color: transparent;
+
+        @media only screen and (max-width : $phone){
+          left: -33.59375vw;
+          top: 1.09375vw;
+          width: 83.75vw;
+          height: 53.125vw;
+        }
+
+        svg{
+          #line-shape{
+            animation: svgOffsetAnimation 1s ease forwards;
+            animation-delay: 1.3s;
+            stroke-dasharray: 800px;
+            stroke-dashoffset: 800px;
+
+            @media only screen and (max-width : $tablet){
+              stroke-dashoffset: 0px;
+            }
+          }
+          #red-block{
+            animation: lightRedAnimation 1s ease forwards;
+            animation-delay: 1.5s;
+            opacity: 0;
+            transform: translateY(30px);
+          }
+        }
+      }
+
+      @media only screen and (max-width : $tablet){
+        padding-bottom: 208px;
+      }
+
+      @media only screen and (max-width : $phone){
+        font-size: 12.5vw;
+        line-height: 15.625vw;
+        padding: 19.0625vw 0 32.5vw;
+      }
+    }
+  }
+
+  &.page-item{
+    .page_headline-title{
+      padding-top: 33px;
+
+      @media only screen and (max-width : $phone){
+        padding-top: 3.125vw;
+      }
+    }
+  }
+}
+
+.page_headline-title-wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.page_headline-logo{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -10px;
+  margin-top: -35px;
+
+  img{
+    max-width: 120px;
+  }
+
+  @media only screen and (max-width : $tablet){
+    display: none;
+  }
+}
+
+.page_headline-category{
+  font-size: 18px;
+  font-family: $medium;
+  padding-top: 102px;
+
+  @media only screen and (max-width : $tablet){
+    font-size: 4.375vw;
+    padding-top: 15.9375vw;
+  }
+}
+
+.page_headline-bg{
+  position: fixed;
+  height: 100vh;
+
+  @media only screen and (max-width : $tablet){
+    position: absolute;
+    height: 100%;
+  }
+}
+
+.page_headline-text{
+  @media only screen and (max-width : $tablet){
+    line-height: 33px;
+  }
+
+  @media only screen and (max-width : $phone){
+    font-size: 4.6875vw;
+    line-height: 7.96875vw;
+    padding-right: 8.59375vw;
+    box-sizing: border-box;
+  }
+}
+
+.page_headline-title{
+  font-size: 55px;
+  font-family: $medium;
+  line-height: 75px;
+  padding: 93px 0;
+  position: relative;
+
+  @media only screen and (max-width : $tablet){
+    br{
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width : $phone){
+    font-size: 8.59375vw;
+    line-height: 11.71875vw;
+    padding: 14.53125vw 0;
+    top: 0;
+    left: 0;
+  }
+
+  span{
+    position: absolute;
+    z-index: -1;
+    width: 340px;
+    height: 254px;
+    top: 20px;
+    left: 315px;
+
+    @media only screen and (max-width : $tablet){
+      left: 0;
+    }
+
+    @media only screen and (max-width : $phone){
+      width: 53.125vw;
+      height: 39.6875vw;
+      top: 1.03125vw;
+    }
+
+    svg #logo{
+      stroke-dasharray: 950px;
+      stroke-dashoffset: 950px;
+
+      @media only screen and (max-width : $tablet){
+        stroke-dashoffset: 0px;
+      }
+    }
+  }
+}
+
+
+.page_img{
+  height: 380px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+
+  div{
+    width: 100%;
+    height: calc(100% + 200px);
+    background-size: cover;
+    background-position: center;
+    transform: translateY(-200px);
+
+    @media only screen and (max-width : $tablet){
+      height: 100%;
+      transform: none;
+    }
+  }
+
+  @media only screen and (max-width : $phone){
+    height: 59.125vw;
+  }
+}
+
+.page_content{
+  padding-top: 120px;
+  background-color: rgba(255,255,255,0.6);
+
+  &.ie{
+    background-color: rgba(255,255,255,1);
+  }
+
+  &.proj{
+    background-color: transparent;
+  }
+
+  &.js-fade{
+    animation: fadeDownAll 0.8s ease forwards;
+    animation-delay: 0.5s;
+
+    &.opacity{
+      animation-delay: 1.5s;
+    }
+  }
+  @media only screen and (max-width : $tablet){
+    animation: none;
+  }
+
+  @media only screen and (max-width : $phone){
+    padding-top: 18.75vw;
+  }
+}
+
+.page_pretext{
+
+  .text{
+    padding-top: 36px;
+    padding-right: 90px;
+
+    @media only screen and (max-width : $tablet){
+      padding-right: 0;
+    }
+
+    @media only screen and (max-width : $phone){
+      padding-top: 5.625vw;
+    }
+  }
+
+  .subtext{
+
+    &:nth-child(3){
+      padding-top: 83px;
+    }
+
+    @media only screen and (max-width : $tablet){
+      &:nth-child(3){
+        padding-top: 40px;
+      }
+    }
+
+    @media only screen and (max-width : $phone){
+      &:nth-child(3){
+        padding-top: 6.25vw;
+      }
+    }
+  }
+}
+
+.page_block{
+  padding-bottom: 130px;
+  position: relative;
+
+  &.-dark{
+    background-color: #e6e6e6;
+    padding-top: 183px;
+    padding-bottom: 78px;
+    margin-bottom: 0;
+    z-index: -1;
+
+    .page_bg-text{
+      color: rgba(0,0,0,0.05);
+    }
+
+    @media only screen and (max-width : $phone){
+      padding-top: 17.8125vw;
+      padding-bottom: 8.125vw;
+    }
+  }
+
+  @media only screen and (max-width : $tablet){
+    margin-bottom: 138px;
+  }
+
+  @media only screen and (max-width : $phone){
+    margin-bottom: 14.6875vw;
+  }
+
+  .page_title{
+    font-size: 55px;
+    font-family: $medium;
+    line-height: 75px;
+    padding-bottom: 83px;
+
+    @media only screen and (max-width : $phone){
+      font-size: 8.59375vw;
+      line-height: 11.71875vw;
+      padding-bottom: 3.28125vw;
+    }
+  }
+
+  .subtext{
+    padding-bottom: 31px;
+
+    @media only screen and (max-width : $phone){
+      padding-bottom: 8.125vw;
+    }
+  }
+
+  .page_quote{
+    margin-top: 70px;
+    width: 72%;
+    margin-bottom: 84px;
+
+    .separator{
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 34px;
+
+      @media only screen and (max-width : $phone){
+        margin-bottom: 5.3125vw;
+      }
+
+      &:first-child{
+        margin-left: -60px;
+        margin-right: 14px;
+
+        @media only screen and (max-width : $phone){
+          margin-left: 0px;
+          margin-right: -1.5625vw;
+        }
+      }
+    }
+
+    @media only screen and (max-width : $tablet){
+      margin-top: 112px;
+      width: 100%;
+      margin-bottom: 125px;
+    }
+
+    @media only screen and (max-width : $phone){
+      margin-top: 13.59375vw;
+      margin-bottom: 14.21875vw;
+    }
+  }
+
+  .page_bg-text{
+    position: absolute;
+    font-size: 300px;
+    font-family: $medium;
+    color: #f4f4f4;
+    text-indent: 315px;
+    white-space: nowrap;
+    line-height: 350px;
+    margin-top: 0px;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+
+    @media only screen and (max-width : $tablet){
+      display: none;
+    }
+  }
+
+  .page_items{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 140px);
+    margin-bottom: 50px;
+
+    &.right-text{
+      width: calc(100% + 100px);
+    }
+
+    @media only screen and (max-width : $tablet){
+      width: calc(100% + 70px);
+    }
+
+    @media only screen and (max-width : $phone){
+      margin-top: 6.5625vw;
+      width: 100%;
+      margin-bottom: 10.9375vw;
+    }
+
+    .page_items-wrapper{
+      display: block;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .page_subtitle{
+    line-height: 60px;
+    padding-bottom: 67px;
+    display: block;
+    width: 70%;
+
+    @media only screen and (max-width : $tablet){
+      width: 100%;
+    }
+
+    @media only screen and (max-width : $phone){
+      line-height: 9.375vw;
+      padding-bottom: 10.46875vw;
+    }
+  }
+
+  .page_item{
+    display: block;
+    width: 290px;
+    box-sizing: border-box;
+    margin-right: 78px;
+    margin-bottom: 50px;
+    &:before{
+      content: '';
+      width: 37px;
+      display: block;
+      height: 3px;
+      background-color: $red;
+      margin-bottom: 25px;
+
+      @media only screen and (max-width : $phone){
+        width: 5.78125vw;
+        height: 0.46875vw;
+        margin-bottom: 3.90625vw;
+      }
+    }
+
+    @media only screen and (max-width : $tablet){
+      margin-right: 30px;
+    }
+
+    @media only screen and (max-width : $phone){
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 7.8125vw;
+    }
+  }
+}
+
+.page_info{
+  display: block;
+  width: 100%;
+}
+
+.page_info-bg{
+  height: 571px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  div{
+    width: 100%;
+    height: calc(100% + 100px);
+    transform: translateY(-100px);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    position: relative;
+    background-repeat: no-repeat;
+
+    @media only screen and (max-width : $tablet){
+      height: 100%;
+      transform: none;
+    }
+    &.not-ie:before{
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: 0.3;
+      z-index: 10;
+      position: absolute;
+      pointer-events: none;
+
+    }
+
+		&.not-ie .ymaps-2-1-56-ground-pane{
+			filter: grayscale(1);
+			filter: url(/img/filters.svg#grayscale); /* Firefox 3.5+ */
+			-webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+			&:after{
+				content:'';
+				position: absolute;
+				z-index:1000;
+				top:-100vh;
+				left:-100vw;
+				width: 300vw;
+				height: 300vh;
+				background-color: #fff;
+				mix-blend-mode: exclusion;
+			}
+		}
+
+  }
+
+  @media only screen and (max-width : $tablet){
+    height: 581px;
+  }
+
+  @media only screen and (max-width : $phone){
+    height: 59.375vw;
+  }
+}
+
+.page_info-block{
+  display: block;
+  margin: -90px auto 17px;
+  width: 1202px;
+  background-color: $red;
+  position: relative;
+  height: 283px;
+  color: #fff;
+  z-index: 2;
+  overflow: hidden;
+
+  @media only screen and (max-width : $tablet){
+    margin-top: 0;
+    width: 100%;
+    height: 570px;
+    margin-bottom: 0;
+  }
+
+  @media only screen and (max-width : $phone){
+    height: auto;
+    padding-bottom: 6.71875vw;
+  }
+}
+
+.page_info-logo{
+  position: absolute;
+  right: -50px;
+  top: -75px;
+  display: block;
+  width: 500px;
+
+  svg{
+    fill: rgba(0,0,0,0.1);
+  }
+
+  @media only screen and (max-width : $phone){
+    right: -7.8125vw;
+    bottom: -11.71875vw;
+    top: auto;
+    width: 78.125vw;
+  }
+}
+
+.page_info-block-items{
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width : $tablet){
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+}
+
+.page_info-block-item{
+  width: 275px;
+  padding-top: 31px;
+
+  @media only screen and (max-width : $tablet){
+    width: 50%;
+    margin-bottom: 43px;
+  }
+
+  @media only screen and (max-width : $phone){
+    width: 100%;
+    padding-top: 8.75vw;
+    margin-bottom: 3.125vw;
+  }
+}
+
+.page_info-block-logo{
+  display: block;
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 25px;
+
+  @media only screen and (max-width : $phone){
+    display: inline-block;
+    vertical-align: top;
+    width: 16.875vw;
+    height: 16.875vw;
+    margin-bottom: 0;
+  }
+}
+
+.page_info-block-wrapper{
+  display: inline-block;
+  vertical-align: top;
+
+  @media only screen and (max-width : $phone){
+    margin-left: 6.71875vw;
+    margin-top: 1.5625vw;
+  }
+}
+
+.page_info-block-title{
+  font-family: $medium;
+  font-size: 55px;
+
+  @media only screen and (max-width : $phone){
+    font-size: 8.59375vw;
+  }
+
+  &.-less{
+    font-size: 28px;
+    line-height: 33px;
+
+    @media only screen and (max-width : $phone){
+      font-size: 5.3125vw;
+      line-height: 6.5625vw;
+    }
+  }
+
+  span{
+    font-size: 18px;
+    margin-left: -10px;
+
+    @media only screen and (max-width : $phone){
+      font-size: 4.6875vw;
+      margin-left: -1.5625vw;
+    }
+  }
+}
+
+.page_info-block-text{
+  color: $black;
+  font-size: 18px;
+  padding-top: 17px;
+  font-weight: 800;
+
+  @media only screen and (max-width : $phone){
+    font-size: 5vw;
+    padding-top: 1.09375vw;
+  }
+}
+
+.page_filters{
+  display: block;
+  position: relative;
+  margin-top: -57px;
+
+  @media only screen and (max-width : $tablet){
+    margin-top: -50px;
+  }
+
+  @media only screen and (max-width : $phone){
+    margin-top: -9.21875vw;
+  }
+}
+
+.page_filter-titles{
+  display: block;
+  width: 1000%;
+  position: relative;
+
+  @media only screen and (max-width : $tablet){
+    &:before{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 200px;
+      height: 40px;
+      left: 450px;
+      top: -10px;
+      background: linear-gradient(to left, rgba(255,255,255,1) 62%, rgba(255,255,255,0) 90%);
+    }
+  }
+
+  @media only screen and (max-width : $phone){
+    &:before{
+      width: 31.25vw;
+      height: 6.25vw;
+      left: 70.3125vw;
+      top: -1.5625vw;
+      background: linear-gradient(to left, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 90%);
+    }
+  }
+}
+
+.page_filter-title{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 21px;
+  font-family: $bold;
+  margin-right: 43px;
+  cursor: pointer;
+  transition: color 0.35s;
+
+  @media only screen and (max-width : $phone){
+    font-size: 4.53125vw;
+    margin-right: 4.0625vw;
+  }
+
+  span{
+    font-size: 13px;
+    display: inline-block;
+    vertical-align: top;
+    font-family: $regular;
+    margin-left: 4px;
+    margin-top: -3px;
+
+    @media only screen and (max-width : $phone){
+      display: none;
+    }
+  }
+
+  &:hover, &.active{
+    color: $red;
+  }
+}
+
+.page_filters_search{
+  position: absolute;
+  right: 0;
+  top: -7px;
+  z-index: 2;
+
+  @media only screen and (max-width : $phone){
+    top: -2.34375vw;
+  }
+}
+
+.page_filters_search-icon{
+  width: 23px;
+  height: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+
+  &.opened{
+    pointer-events: none;
+  }
+
+  @media only screen and (max-width : $tablet){
+    margin-right: 18px;
+  }
+
+  @media only screen and (max-width : $phone){
+    width: 6.71875vw;
+    height: 6.71875vw;
+    margin-right: 2.8125vw;
+  }
+
+  svg{
+    fill: $black;
+    transition: fill 0.35s;
+  }
+
+  &:hover{
+    svg{
+      fill: $red;
+    }
+  }
+}
+
+.page_filters_search-input{
+  position: absolute;
+  right: -3px;
+  top: -20px;
+  display: block;
+  width: 973px;
+  outline: none;
+  border: none;
+  color: $black;
+  font-size: 24px;
+  background-color: #e6e6e6;
+  font-family: $regular;
+  box-sizing: border-box;
+  padding: 6px 60px 0 20px;
+  height: 62px;
+  display: none;
+
+  @media only screen and (max-width : $tablet){
+    width: 580px;
+    right: 0;
+  }
+
+  @media only screen and (max-width : $phone){
+    height: 12.8125vw;
+    width: 90.625vw;
+    top: -3.125vw;
+    font-size: 4.21875vw;
+    padding: 0 9.375vw 0 3.125vw;
+  }
+}
+
+.page_filter-selects{
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% + 3px);
+
+  @media only screen and (max-width : $tablet){
+    width: 100%;
+  }
+
+  @media only screen and (max-width : $phone){
+    margin-top: 9.21875vw;
+    display: block;
+  }
+
+  .jq-selectbox{
+    @media only screen and (max-width : $phone){
+      width: 100%;
+      margin-bottom: 4.6875vw;
+    }
+  }
+
+  .jq-selectbox.opened{
+    .jq-selectbox__trigger{
+      transform: rotate(135deg);
+      top: -5px;
+      right: 17px;
+
+      @media only screen and (max-width : $phone){
+        top: -0.78125vw;
+        right: 4.375vw;
+      }
+    }
+  }
+
+  .jq-selectbox__select{
+    width: 470px;
+    height: 64px;
+    border-color: #d6d6d6 !important;
+    border-radius: 0;
+    box-shadow: none;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 0 50px 0 20px;
+
+    @media only screen and (max-width : $tablet){
+      width: 280px;
+    }
+    @media only screen and (max-width : $phone){
+      width: 100%;
+      height: 12.1875vw;
+      padding: 0 9.375vw 0 3.90625vw;
+    }
+  }
+
+  .jq-selectbox__select-text{
+    font-size: 21px;
+    padding-top: 18px;
+    font-family: $regular;
+
+    @media only screen and (max-width : $phone){
+      font-size: 4.6875vw;
+      padding-top: 1.4625vw;
+    }
+  }
+
+  .jq-selectbox__trigger{
+    border: none;
+    transform: rotate(-45deg);
+    top: 8px;
+
+    @media only screen and (max-width : $phone){
+      top: 0.875vw;
+    }
+
+    .jq-selectbox__trigger-arrow{
+      width: 8px;
+      height: 8px;
+      border: none;
+      border-left: 2px solid $black;
+      border-bottom: 2px solid $black;
+
+      @media only screen and (max-width : $phone){
+        width: 1.5625vw;
+        height: 1.5625vw;
+      }
+    }
+  }
+
+  .jq-selectbox__dropdown{
+    margin-top: 0;
+    box-sizing: border-box;
+    border: 1px solid #d6d6d6;
+    border-radius: 0;
+    background: #FFF;
+    box-shadow: none;
+    font-family: $regular;
+    border-top: none;
+
+    li{
+      min-height: 18px;
+      padding: 23px 20px 23px;
+      color: $black;
+      font-family: $regular;
+      font-size: 21px;
+      line-height: 23px;
+      white-space: initial;
+      border-top: 1px solid #d6d6d6;
+      transition: all 0.35s;
+
+      @media only screen and (max-width : $phone){
+        padding: 3.59375vw 3.125vw;
+        font-size: 4.6875vw;
+        line-height: 6.25vw;
+      }
+
+      &:first-child{
+        border: none;
+      }
+
+      &:hover{
+        background-color: $red;
+        color: #fff;
+      }
+    }
+
+    li.selected{
+      background-color: $red;
+      color: #fff;
+    }
+  }
+}
+
+.page_filters-block{
+  margin-bottom: 90px;
+
+  @media only screen and (max-width : $tablet){
+    margin-bottom: 57px;
+  }
+
+  @media only screen and (max-width : $phone){
+    margin-bottom: 10.46875vw;
+  }
+}
+
+.js-fade{
+  opacity: 0;
+  transform: translateY(30px);
+  @media only screen and (max-width : $tablet){
+    opacity: 1;
+    transform: none;
+  }
+
+  &.faded{
+    animation: fadeDownAll 0.8s ease forwards;
+  }
+}
+
+@keyframes fadeDownAll {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

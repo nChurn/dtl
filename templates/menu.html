@@ -1,0 +1,28 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<div class="menu js-popup" data-popup="menu">
+  <div class="menu_bg">{% include 'bg.svg' %}</div>
+  <div class="menu_wrapper">
+    <div class="menu_close js-close">{% include 'close.svg' %}</div>
+    <div class="menu_langs">
+      <a class="menu_lang {% if LANGUAGE_CODE == 'ru' %}-active{% endif %} js-change-lang" data-lang="ru">RU</a>
+      <a class="menu_lang {% if LANGUAGE_CODE == 'en' %}-active{% endif %}  js-change-lang" data-lang="en">EN</a>
+    </div>
+    <div class="menu_about">
+      <p class="menu_title">{% trans "О Группе" %}<span></span></p>
+      <div>
+        <a href="{% url 'about' %}" class="menu_about-link">{% trans "О нас" %}</a>
+        <a href="{% url 'team' %}" class="menu_about-link">{% trans "Команда" %}</a>
+        <a href="{% url 'career' %}" class="menu_about-link">{% trans "Карьера" %}</a>
+        <!-- <a href="{% url 'docs' %}" class="menu_about-link">Документация</a> -->
+      </div>
+    </div>
+    <div class="menu_links">
+      <a class="menu_link" href="{% url 'actives' %}">{% trans "Активы" %}</a>
+      <a class="menu_link" href="{% url 'expertise' %}">{% trans "Экспертиза" %}</a>
+      <a class="menu_link" href="{% url 'projects' %}">{% trans "Проекты" %}</a>
+      <a class="menu_link" href="{% url 'news' %}">{% trans "Новости" %}</a>
+      <a class="menu_link" href="{% url 'contacts' %}">{% trans "Контакты" %}</a>
+    </div>
+  </div>
+</div>

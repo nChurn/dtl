@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% block 'content' %}
+  <div class="page404 js-light">
+    <div class="page404_content">
+      <div class="wrapper">
+        <h1 class="page404_title">404<span>{% include 'logo3.svg' %}</span></h1>
+        <p class="page404_text">{% trans "Страницы с данным адресом не существует." %}</p>
+        <button class="button page404_button -light">{% trans "Вернуться на главную" %}<span>{% include 'arrow.svg' %}</span></button>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block 'footer' %}{% endblock %}

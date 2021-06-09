@@ -1,0 +1,20 @@
+<svg viewBox="0 0 330 388" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mane-page-svg">
+            <g id="line-shape" transform="translate(1.000000, 32.000000)" stroke="rgba(255,255,255,0.5)">
+                <g id="Page-2">
+                    <g id="Artboard">
+                        <path d="M0,0 L175,0 L297,154 M297,154 L297,356 L0,0" id="line-shape"></path>
+                    </g>
+                </g>
+            </g>
+            <g id="thin-shape" transform="translate(125.000000, 69.000000)" fill="#E1231A" fill-rule="nonzero">
+            	<stop offset="100%" stop-color="rgb(0,0,0)" stop-opacity="0"></stop>
+                <polygon points="0 63.5 140 226.5 140 130.5 33.5 0"></polygon>
+            </g>
+            <g id="bold-shape" transform="translate(126.000000, 0.000000)" fill="#9C2714" fill-rule="nonzero">
+                <polygon points="69 0 0 130.999 135 130.999 204 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

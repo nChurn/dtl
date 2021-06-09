@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>{{page_title}}</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#000">
+
+  <!-- <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" sizes="180x180"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-32x32.png" sizes="32x32" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-16x16.png" sizes="16x16" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon"> -->
+
+  <!-- <link rel="stylesheet" href="css/main-first.min.css">	 -->
+  <link rel="stylesheet" href="{% static 'css/main.min.css'%} ">
+</head>
+<body>
+  {% include 'pages/blocks/metrika.html'%}
+  <div id="site">
+    {% include 'pages/blocks/header.html'%}
+    <main class="main">
+      <section class="title_block" style="background-image: url({% static 'img/upload/banner-news.jpg' %});">
+        <div class="container container-narrow title_block__container">
+          <h1 class="title_common title_common-bg">
+            Новости
+          </h1>
+        </div>
+      </section>
+      <section class="news_section">
+        <h2 class="title-hidden">
+          Новости
+        </h2>
+        <div class="container container-narrow">
+          <div class="year_filter news_section__year_filter">
+            <ul class="rst year_filter__items">
+              <li class="year_filter__item">
+                <a class="year_filter__link year_filter__link-active" href="#">
+                  2021
+                </a>
+              </li>
+              <li class="year_filter__item">
+                <a class="year_filter__link" href="#">
+                  2020
+                </a>
+              </li>
+              <li class="year_filter__item">
+                <a class="year_filter__link" href="#">
+                  2019
+                </a>
+              </li>
+              <li class="year_filter__item">
+                <a class="year_filter__link" href="#">
+                  Архив
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="news_section__items">
+            
+            {% for new in news %}
+            
+            <article class="news_item news_section__item">
+              <!-- <img class="news_item__img" src="" alt=""> -->
+
+              <div class="news_item__img" style="background-image:url({{new.photo.url}})"></div>
+              <span class="news_item__date news_item__date-active">
+                {{new.news_item__date}}
+              </span>
+              <div class="news_item__info">
+                <h2 class="news_item__title">
+                  <a class="news_item__title_link" href="{{new.slug}}">
+                    {{new.title}}
+                  </a>
+                </h2>
+                <p class="news_item__text">
+                  {{new.subtitle}}
+                </p>
+              </div>
+              <ul class="rst news_item__tags">
+                <li class="news_item__tag">
+                  <a class="news_item__tag_link" href="#">
+                    {{ new.subtitle1}}
+                  </a>
+                </li>
+                <li class="news_item__tag">
+                  <a class="news_item__tag_link" href="#">
+                    {{ new.subtitle2 }}
+                  </a>
+                </li>
+                <li class="news_item__tag">
+                  <a class="news_item__tag_link" href="#">
+                    {{ new.subtitle3 }}
+                  </a>
+                </li>
+              </ul>
+            </article>
+            {% endfor %}
+            <!--<article class="news_item news_section__item">
+               <img class="news_item__img" src="" alt=""> 
+              <div class="news_item__img" style="background-image: url({% static 'img/upload/news/1.jpg' %})"></div>
+              <span class="news_item__date">
+                20 Апреля
+              </span>
+              <div class="news_item__info">
+                <h2 class="news_item__title">
+                  <a class="news_item__title_link" href="#">
+                    Управляющие партнеры Proxima Capital Group приняли участие в Первом Евразийском конгрессе
+                  </a>
+                </h2>
+                <p class="news_item__text">
+                  Он организован Евразийским банком развития и прошел в формате панельных дискуссий по вопросам евразийской экономической интеграции
+                </p>
+              </div>
+              <ul class="rst news_item__tags">
+                <li class="news_item__tag">
+                  <a class="news_item__tag_link" href="#">
+                    #Аналитика
+                  </a>
+                </li>
+                <li class="news_item__tag">
+                  <a class="news_item__tag_link" href="#">
+                    #Новость
+                  </a>
+                </li>
+              </ul>
+            </article>
+            <article class="news_item news_section__item">
+              <img class="news_item__img" src="" alt=""> 
+              <div class="news_item__img" style="background-image: url({% static 'img/upload/news/1.jpg' %})"></div>
+              <span class="news_item__date">
+                14 Марта
+              </span>
+              <div class="news_item__info">
+                <h2 class="news_item__title">
+                  <a class="news_item__title_link" href="#">
+                    Запущены новые линии на одном из комбинатов UPG
+                  </a>
+                </h2>
+                <p class="news_item__text">
+                  На одном из комбинатов United Panel Group введены в эксплуатацию новая линия сушки шпона и линия ребросклеивания
+                </p>
+              </div>
+              <ul class="rst news_item__tags">
+                <li class="news_item__tag">
+                  <a class="news_item__tag_link" href="#">
+                    #Аналитика
+                  </a>
+                </li>
+                <li class="news_item__tag">
+                  <a class="news_item__tag_link" href="#">
+                    #Новость
+                  </a>
+                </li>
+              </ul>
+            </article>
+            <article class="news_item news_section__item">
+               <img class="news_item__img" src="" alt=""> 
+              <div class="news_item__img" style="background-image: url({% static 'img/upload/news/1.jpg'%} )"></div>
+              <span class="news_item__date">
+                05 Февраля
+              </span>
+              <div class="news_item__info">
+                <h2 class="news_item__title">
+                  <a class="news_item__title_link" href="#">
+                    Управляющие партнеры Proxima Capital Group приняли участие в Первом Евразийском конгрессе
+                  </a>
+                </h2>
+                <p class="news_item__text">
+                  Он организован Евразийским банком развития и прошел в формате панельных дискуссий по вопросам евразийской экономической интеграции
+                </p>
+              </div>
+              <ul class="rst news_item__tags">
+                <li class="news_item__tag">
+                  <a class="news_item__tag_link" href="#">
+                    #Аналитика
+                  </a>
+                </li>
+                <li class="news_item__tag">
+                  <a class="news_item__tag_link" href="#">
+                    #Новость
+                  </a>
+                </li>
+                <li class="news_item__tag">
+                  <a class="news_item__tag_link" href="#">
+                    #Оченьдлинныйхэштег
+                  </a>
+                </li>
+                <li class="news_item__tag">
+                  <a class="news_item__tag_link" href="#">
+                    #Оченьдлинныйхэштег
+                  </a>
+                </li>
+                <li class="news_item__tag">
+                  <a class="news_item__tag_link" href="#">
+                    #Оченьдлинныйхэштег
+                  </a>
+                </li>
+              </ul>
+            </article>-->
+          </div>
+        </div>
+      </section>
+    </main>
+    {% include 'pages/blocks/footer.html'%}
+  </div>  <!--id site-->
+  {% include 'pages/blocks/fixed_menu.html'%}
+  {% include 'pages/blocks/modals.html'%}
+  <script src="{% static 'js/scripts.min.js' %}"></script>
+  <script>
+    const years = document.querySelectorAll('.year_filter__link')
+    const news_section = document.querySelector('.news_section__items')
+
+    function choosedYear(){
+      if (!this.classList.contains('year_filter__link-active')){
+        this.classList.add('year_filter__link-active');
+        years.forEach(el => {
+          if (el != this){
+            el.classList.remove('year_filter__link-active')
+          }
+        })
+                
+      }
+    }
+    
+    for (var i=0; i < years.length; i++){
+      years[i].addEventListener('click', choosedYear)
+    }
+
+  </script>
+</body>
+</html>

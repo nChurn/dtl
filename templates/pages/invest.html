@@ -1,0 +1,218 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Proxima</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#000">
+
+  <!-- <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" sizes="180x180"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-32x32.png" sizes="32x32" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-16x16.png" sizes="16x16" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon"> -->
+
+  <!-- <link rel="stylesheet" href="css/main-first.min.css">	 -->
+  <link rel="stylesheet" href="{% static 'css/main.min.css'%}">
+</head>
+<body>
+  {% include 'pages/blocks/metrika.html'%}
+  <div id="site">
+    {% include 'pages/blocks/header.html'%}
+    <main class="main">
+      <section class="title_block" style="background-image: url({% static 'img/upload/banner-invest.jpg' %});">
+        <div class="container container-narrow title_block__container">
+          <h1 class="title_common title_common-bg">
+            Собственные инвестиции <br>
+            Proxima Capital Group
+          </h1>
+        </div>
+      </section>
+      <section class="invest">
+        <div class="container container-narrow">
+          <div class="invest__desc">
+            <div class="text">
+              <p>
+                <b class="colored">Proxima Capital Group (PCG)</b>, как правило, выступает в роли финансового инвестора со
+                стратегическим подходом.
+              </p>
+              <p>
+                Мы имеем в портфельных компаниях контроль или существенные корпоративные права, так как
+                нам важно активно участвовать в управлении компанией, определять и влиять на стратегию ее
+                развития, формировать команду менеджмента.
+
+              </p>
+              <p>
+                У нас нет четко определенного горизонта инвестирования, что позволяет нам рассматривать
+                монетизацию активов как путем продажи или частичной продажи бизнеса в среднесрочной
+                перспективе, так и путем получения дивидендного дохода и роста капитализации на более
+                длинном горизонте.
+              </p>
+            </div>
+          </div>
+          <div class="invest__where">
+            <h2 class="title_default invest__title">
+              Куда мы инвестируем
+            </h2>
+            <div class="text">
+              <p>
+                В фокусе наших инвестиционных интересов находятся компании, которые удовлетворяют
+                следующим основным критериям:
+              </p>
+              <ul class="rst list_custom">
+                <li>
+                  Ведут деятельность в перспективной отрасли, которая показывает высокие или
+                  устойчивые темпы роста, имеет экспортный потенциал, характеризуется благоприятной
+                  конкурентной обстановкой.
+                </li>
+                <li>
+                  Обладают существенным потенциалом роста и в перспективе могут занять значимую
+                  долю рынка.
+                </li>
+                <li>
+                  Имеют конкурентные преимущества, позволяющие реализовать имеющийся потенциал: выгодное положение на рынке, стратегическое географическое расположение,
+                  качественный продукт, ценные ноу-хау, уникальные активы и т.п.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="invest__when">
+            <h2 class="title_default invest__title">
+              Когда мы инвестируем
+            </h2>
+            <div class="text">
+              <ul class="rst list_custom">
+                <li>
+                  Предприятие столкнулось с существенными проблемами вследствие чрезмерной
+                  долговой нагрузки – в этом случае наше участие помогает владельцам компании спасти
+                  бизнес и наладить нормальную операционную деятельность.
+                </li>
+                <li>
+                  Компания достигла локального «потолка», и для дальнейшего развития ей необходим
+                  импульс. С нашей экспертизой компания может выйти на другой уровень: начать работу в
+                  новом более перспективном сегменте, выйти на федеральный рынок, изменить бизнес – процессы и повысить прибыльность операций.
+                </li>
+                <li>
+                  Компания достигла достаточного уровня зрелости и имеет структуру бизнеса и капитала,
+                  допускающих реализацию сделки в форме LBO*– в этом случае мы привлекаем долговое
+                  финансирование и структурируем сделку так, чтобы это не создавало финансовых рисков
+                  для бизнеса и не препятствовало его развитию
+                </li>
+              </ul>
+              <p class="text__small invest__when_small">
+                * Приобретение акций/долей компании с привлечением долговых средств на баланс
+                компании-цели
+              </p>
+            </div>
+          </div>
+          <ul class="rst invest__items">
+            {% for active_proj in act_projects %}
+              <li class="invest__item card">
+                <div class="card__img" style="background-image: url({{active_proj.photo.url}});"></div>
+                <div class="card__content">
+                  <h3 class="card__name">
+                    {{active_proj.title}}
+                  </h3>
+                  <p class="card__text">
+                    {{ active_proj.client }}
+                  </p>
+                </div>
+              </li>
+
+            {% endfor %}
+            {% for ended_proj in end_projects %}
+            <li class="invest__item card card-inactive">
+              <div class="card__img" style="background-image: url({{ ended_proj.photo.url}});"></div>
+              <div class="card__content">
+                <h3 class="card__name">
+                  {{ ended_proj.title}}
+                </h3>
+                <p class="card__text">
+                  {{ ended_proj.client}}
+                </p>
+              </div>
+            </li>
+            {% endfor %}
+            <!--
+            <li class="invest__item card">
+              <div class="card__img" style="background-image: url({% static 'img/upload/invest/1.jpg' %});"></div>
+              <div class="card__content">
+                <h3 class="card__name">
+                  РосАгроМаркет
+                </h3>
+                <p class="card__text">
+                  Федеральная сеть оптово - распределительных центров
+                </p>
+              </div>
+            </li>
+            <li class="invest__item card">
+              <div class="card__img" style="background-image: url({% static 'img/upload/invest/2.jpg' %});"></div>
+              <div class="card__content">
+                <h3 class="card__name">
+                  United Panel Group
+                </h3>
+                <p class="card__text">
+                  Производитель фанеры и МДФ
+                </p>
+              </div>
+            </li>
+            <li class="invest__item card">
+              <div class="card__img" style="background-image: url({% static 'img/upload/invest/3.jpg' %});"></div>
+              <div class="card__content">
+                <h3 class="card__name">
+                  Квадро Декор
+                </h3>
+                <p class="card__text">
+                  Производитель керамогранита и керамической плитки
+                </p>
+              </div>
+            </li>
+            <li class="invest__item card">
+              <div class="card__img" style="background-image: url({% static 'img/upload/invest/4.jpg'%});"></div>
+              <div class="card__content">
+                <h3 class="card__name">
+                  СитиДрайв
+                </h3>
+                <p class="card__text">
+                  Оператор каршеринга
+                </p>
+              </div>
+            </li>
+            <li class="invest__item card">
+              <div class="card__img" style="background-image: url({% static 'img/upload/invest/5.jpg'%});"></div>
+              <div class="card__content">
+                <h3 class="card__name">
+                  АльфаСклад
+                </h3>
+                <p class="card__text">
+                  Сервис индивидуального хранения вещей
+                </p>
+              </div>
+            </li>
+            <li class="invest__item card card-inactive">
+              <div class="card__img" style="background-image: url({% static 'img/upload/invest/6.jpg'%});"></div>
+              <div class="card__content">
+                <h3 class="card__name">
+                  JKX Oil&Gas
+                </h3>
+                <p class="card__text">
+                  Нефтегазовая компания
+                </p>
+              </div>
+            </li>
+          -->
+          </ul>
+        </div>
+      </section>
+    </main>
+    {% include 'pages/blocks/footer.html'%}
+  </div>  <!--id site-->
+  {% include 'pages/blocks/fixed_menu.html'%}
+  {% include 'pages/blocks/modals.html'%}
+  <script src="{% static 'js/scripts.min.js'%} "></script>
+</body>
+</html>

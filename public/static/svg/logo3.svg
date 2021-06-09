@@ -1,0 +1,9 @@
+<svg viewBox="0 0 542 338" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="vtor-SVG1">
+            <path id="line-shape" d="M195,337.5 C195,337.5 130.666451,337.5 1.99935233,337.5 L262,0.5" id="pathLogo" stroke="#FFFFFF" opacity="0.51"></path>
+            <path id="line-shape" d="M388.000648,338 C388.000648,338 323.667098,338 195,338 L455.000648,1" id="pathLogo" stroke="#FFFFFF" opacity="0.51" transform="translate(325.000324, 169.500000) scale(-1, -1) translate(-325.000324, -169.500000) "></path>
+            <polygon id="red-block" fill="#E1231A" points="278 38 412.508364 38 541.5 204 407.491605 204"></polygon>
+        </g>
+    </g>
+</svg>

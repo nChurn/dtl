@@ -1,0 +1,105 @@
+{% load static %}
+<header class="header">
+  <div class="header__fixed_block" data-scroll-header>
+    <div class="container header__container">
+      <a class="logo" href="/">
+        <img src="{% static 'img/logo.svg'%}" alt="logo">
+      </a>
+      <nav class="header__navigation">
+        <ul class="rst header__menu menu">
+          <li class="menu__item-childed">
+            <a class="smooth_scroll" href="{%url 'pages:about'%}">
+              О группе
+            </a>
+            <ul class="rst menu__sec_menu">
+              <li>
+                <a class="smooth_scroll" href="{%url 'pages:about'%}#about">
+                  О нас
+                </a>
+              </li>
+              <li>
+                <a class="smooth_scroll" href="{%url 'pages:about'%}#team">
+                  Команда
+                </a>
+              </li>
+              <li>
+                <a class="smooth_scroll" href="{%url 'pages:about'%}#career">
+                  Карьера
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item-childed">
+            <a class="" href="{% url 'pages:consulting'%}">
+              Консалтинговые услуги
+            </a>
+            <ul class="rst menu__sec_menu">
+              <li>
+                <a class="smooth_scroll" href="{% url 'pages:consulting'%}#invest">
+                  Инвестиционно - банковские услуги
+                </a>
+              </li>
+              <li>
+                <a class="smooth_scroll" href="{% url 'pages:consulting'%}#problems">
+                  Проблемные активы
+                  и&nbsp;задолженность
+                </a>
+              </li>
+              <li>
+                <a class="smooth_scroll" href="{% url 'pages:consulting'%}#closed">
+                  Закрытые сделки
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item-childed">
+            <a href="{% url 'pages:actives'%}">
+              Собственные инвестиции
+            </a>
+            <ul class="rst menu__sec_menu">
+              <li>
+                <a href="#">
+                  Инвестиционный подход
+                </a>
+              </li>
+              <li>
+                <a href="{% url 'pages:actives'%}">
+                  Портфельные компании
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="{% url 'pages:news'%}">
+              Новости
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'pages:contacts'%}">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!--
+      <ul class="rst header__langs">
+        <li>
+          <a class="header__lang" href="#">
+            RU
+          </a>
+        </li>
+        <li>
+          <a class="header__lang header__lang-active" href="#">
+            EN
+          </a>
+        </li>
+      </ul>
+    -->
+      <button class="btn_burger header__burger">
+        <span>
+          menu
+        </span>
+      </button>
+    </div>
+  </div>
+</header>

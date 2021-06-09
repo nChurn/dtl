@@ -1,0 +1,48 @@
+{% load i18n %}
+{% load static %}
+{% get_current_language as LANGUAGE_CODE %}
+<header class="header {% if request.path == '/' %}-light{% endif %}" data-lang="{{ LANGUAGE_CODE }}">
+  <div class="wrapper">
+    <a {% if LANGUAGE_CODE == "ru" %} href="/" {% else %} href="/en/" {% endif %} class="header_logo">{% static 'img/logo.svg' %}</a>
+    <nav class="header_nav">
+      <ul class="header_items">
+        <li class="header_item">
+          <a class="header_link" href='{% url "about"%}'>{% trans "О Группе" %}</a>
+          
+          <a class="header_link">{% trans "О Группе" %}</a>
+  
+          <div class="header_menu">
+          {% if "/about" not in request.path %}
+            <a class="header_link {% if '/about/' in request.path %}-active{% endif %}" href="{% url 'about' %}">{% trans "О нас" %}</a>
+          {% else %}
+            <a class="header_link {% if '/about/' in request.path %}-active{% endif %}">{% trans "О нас" %}</a>
+          {% endif %}
+            <a class="header_link {% if '/team/' in request.path %}-active{% endif %}" href="{% url 'team' %}">{% trans "Команда" %}</a>
+            <a class="header_link {% if '/career/' in request.path %}-active{% endif %}" href="{% url 'career' %}">{% trans "Карьера" %}</a>
+            <!-- <a class="header_link {% if '/docs/' in request.path %}-active{% endif %}" href="{% url 'docs' %}">Документация</a> -->
+          </div>
+        </li>
+        <li class="header_item">
+          <a href="{% url 'actives' %}" class="header_link {% if '/actives/' in request.path %}-active{% endif %}">{% trans "Активы" %}</a>
+        </li>
+        <li class="header_item">
+          <a href="{% url 'projects' %}" class="header_link {% if '/projects/' in request.path %}-active{% endif %}">{% trans "Проекты" %}</a>
+        </li>
+        <li class="header_item">
+          <a href="{% url 'expertise' %}" class="header_link {% if '/expertise/' in request.path %}-active{% endif %}">{% trans "Экспертиза" %}</a>
+        </li>
+        <li class="header_item">
+          <a href="{% url 'news' %}" class="header_link {% if '/news/' in request.path %}-active{% endif %}">{% trans "Новости" %}</a>
+        </li>
+        <li class="header_item">
+          <a href="{% url 'contacts' %}" class="header_link {% if '/contacts/' in request.path %}-active{% endif %}">{% trans "Контакты" %}</a>
+        </li>
+      </ul>
+      <div class="header_langs">
+        <a class="header_lang {% if LANGUAGE_CODE == 'ru' %}-active{% endif %} js-change-lang" data-lang="ru">RU</a>
+        <a class="header_lang {% if LANGUAGE_CODE == 'en' %}-active{% endif %}  js-change-lang" data-lang="en">EN</a>
+      </div>
+    </nav>
+    <div class="index_headline-burger header_burger js-trigger" data-popup="menu">{% include 'menu_buter.svg' %}</div>
+  </div>
+</header>

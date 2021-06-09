@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Proxima</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#000">
+
+  <!-- <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" sizes="180x180"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-32x32.png" sizes="32x32" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon-16x16.png" sizes="16x16" type="image/png"> -->
+  <!-- <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon"> -->
+
+  <!-- <link rel="stylesheet" href="css/main-first.min.css">	 -->
+  <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
+</head>
+<body>
+  {% include 'pages/blocks/metrika.html'%}
+  <div id="site">
+    {% include 'pages/blocks/header.html'%}
+    <main class="main">
+      <section class="contacts">
+        <div class="contacts__title">
+          <div class="container container-narrow">
+            <h2 class="title_common title_common-dark">Контакты</h2>
+          </div>
+        </div>
+        <div class="contacts_section contacts_section-tall" style="background-image: url({% static 'img/map-contacts.png'%});">
+          <div class="container contacts_section__container">
+            <div class="contacts_section__content">
+              <a class="contacts_section__phone" href="tel:+74959700786">
+                +7 (495) 970 07 86
+              </a>
+              <a class="contacts_section__email" href="mailto:info@proximagroup.ru">
+                info@proximagroup.ru
+              </a>
+              <address class="contacts_section__address">
+                123112, Москва, Пресненская набережная, <br>д.10 «Башня на Набережной», блок C, эт. 25
+              </address>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {% include 'pages/blocks/footer.html'%}
+  </div>  <!--id site-->
+  {% include 'pages/blocks/fixed_menu.html'%}
+  {% include 'pages/blocks/modals.html'%}
+  <script src="js/scripts.min.js"></script>
+</body>
+</html>
